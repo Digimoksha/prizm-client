@@ -2,15 +2,34 @@
 .main-auth-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   height: 100%;
 }
 .auth-card {
-  width: 72.75rem;
+  width: 28.25rem;
   height: 35rem;
   display: flex;
   align-items: center;
   border-radius: 2rem;
+  margin-left: 6rem;
+}
+
+.auth-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#welcome-text {
+font-weight: 100;
+font-size: 1.5rem;
+}
+
+#signin-text {
+  font-weight: 400;
+  font-size: 1rem;
 }
 .auth-form-container {
   width: 23rem;
@@ -26,16 +45,18 @@ form {
   justify-content: center;
   align-items: center;
 }
-.auth-select-element {
+.auth-select-element, .input-container {
   width: 22.33rem;
   height: 3.3rem;
-  border: 0.08rem solid #DEDEDEAB;
-  border-radius: 0.5rem;
-}
-.auth-select-element {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #555555AB;
   font-weight: 400;
   font-size: 1rem;
+  outline: none;
 }
+
 .contact-number-container {
   display: flex;
   flex-direction: row;
@@ -49,8 +70,6 @@ form {
   border-top: none;
   border-bottom: 1px solid #000000;
   outline: none;
-  font-weight: bold;
-  font-size: 1rem;
 }
 
 .phone-input {
@@ -64,12 +83,13 @@ form {
   border-bottom: 1px solid #000000;
 }
 
-.phone-input::placeholder {
+.input-container::placeholder {
   font-size: 1rem;
   font-weight: lighter;
+  color: #000000;
 }
 button{
-  width: 8rem;
+  width: 23.5rem;
   height: 2.5rem;
   border-radius: 2rem;
   margin-top: 2rem;
@@ -79,12 +99,12 @@ button{
   cursor: pointer;
 }
 
-p {
+ .auth-notification p {
   margin-top: 2rem;
   font-weight: 300;
   font-size: 0.875rem;
 }
-p a {
+.auth-notification p a {
   color: #0873BB;
   cursor: pointer;
 }

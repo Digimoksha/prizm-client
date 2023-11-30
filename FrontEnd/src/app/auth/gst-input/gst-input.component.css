@@ -5,15 +5,33 @@
   justify-content: center;
   height: 100%;
 }
+
 .auth-card {
   width: 72.75rem;
   height: 35rem;
-  display: flex;
-  align-items: center;
   border-radius: 2rem;
 }
+.logo-container {
+  display: flex;
+  justify-content: end;
+}
+.logo img {
+  width: 9rem;
+
+}
+.role-notification {
+  margin-left: 4rem;
+}
+.role-notification #role {
+  font-size: 1.625rem;
+  font-weight: 300;
+}
+.gst-form {
+  display: flex;
+  justify-content: center;
+}
 .auth-form-container {
-  width: 23rem;
+  width: 49rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,13 +40,6 @@
 }
 
 
-.input-container, .phone-select, .otp-input {
-
-border-left: none;
-border-right: none;
-border-top: none;
-border-bottom: 1px solid #555555AB;
-}
 form {
   display: flex;
   flex-direction: column;
@@ -53,29 +64,9 @@ input[type="number"]::-webkit-outer-spin-button {
 /* input[type="number"] {
     -moz-appearance: textfield;
 } */
-.phone-select {
-  margin-top: 2rem;
-  outline: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
 
-.phone-input {
-  width: 16.12rem;
-  height: 2rem;
-  margin-top: 2rem;
-  font-size: 1rem;
-  border: none;
-  letter-spacing: 0.09rem;
-  outline: none;
-}
-
-.phone-input::placeholder {
-  font-size: 1rem;
-  font-weight: lighter;
-}
 button{
-  width: 8rem;
+  width: 15rem;
   height: 2.5rem;
   border-radius: 2rem;
   margin-top: 2rem;
@@ -99,27 +90,20 @@ p a {
   cursor: pointer;
 }
 
-.otp-input-container {
+.gst-input-container {
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
 }
-.otp-input {
-width: 9.5%;
-height: 2rem;
+.gst-input {
+width: 5.5%;
+height: 2.5rem;
 outline: none;
+border: 1px solid #DEDEDE;
+border-radius: 0.25rem;
+background-color: #FBFBFD;
 }
 
-#role {
-  font-size: 1rem;
-  font-weight: 400;
-}
 
-#role a {
-  font-weight: 200;
-}
 
-.role-notification img
- {
-  color: red;
- }
+
