@@ -1,0 +1,125 @@
+
+.main-auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.auth-card {
+  width: 72.75rem;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+}
+.auth-form-container {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+
+.input-container, .phone-select, .otp-input {
+
+border-left: none;
+border-right: none;
+border-top: none;
+border-bottom: 1px solid #555555AB;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-number-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 22.33rem;
+}
+/* Style to remove the increase/decrease buttons in Chrome and Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Style to remove the increase/decrease buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.phone-select {
+  margin-top: 2rem;
+  outline: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.phone-input {
+  width: 16.12rem;
+  height: 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border: none;
+  letter-spacing: 0.09rem;
+  outline: none;
+}
+
+.phone-input::placeholder {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+button{
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: #00ADEF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+}
+
+p {
+  margin-top: 2rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+p a {
+  font-weight: 500;
+  color: #0873BB;
+  cursor: pointer;
+}
+
+.otp-input-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.otp-input {
+width: 9.5%;
+height: 2rem;
+outline: none;
+}
+
+#role {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#role a {
+  font-weight: 200;
+}
+
+.role-notification img
+ {
+  color: red;
+ }

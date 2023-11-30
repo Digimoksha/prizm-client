@@ -1,0 +1,43 @@
+
+<div class="main-auth-container">
+  <div class="auth-background-image"></div>
+  <mat-card class="auth-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title><img src="../../../assets/logo_hd.svg"></mat-card-title>
+    </mat-card-header>
+
+      <div class="auth-form-container">
+
+    <div class="role-notification">
+      <p id="role">I am a Seller <a>Change</a></p>
+    </div>
+        <form>
+          <div class="contact-number-container">
+            <select class="phone-select">
+              <option><img src="../../../assets/nation-flag.svg">+91</option>
+              <option>+03</option>
+              <option>+16</option>
+            </select>
+            <div class="input-container">
+              <input type="number" class="phone-input" value="9877656544">
+              <img src="../../../assets/edit-icon.svg">
+            </div>
+          </div>
+          <div class="otp-input-container">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        </div>
+          <button>VERIFY</button>
+        </form>
+        <div class="auth-notification">
+          <p>Didn’t recieve the code? <a>Resend</a></p>
+        </div>
+      </div>
+  </mat-card>
+
+</div>

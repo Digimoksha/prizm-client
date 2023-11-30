@@ -1,0 +1,88 @@
+
+.main-auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.auth-card {
+  width: 72.75rem;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+}
+.auth-form-container {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.auth-select-element {
+  width: 22.33rem;
+  height: 3.3rem;
+  border: 0.08rem solid #DEDEDEAB;
+  border-radius: 0.5rem;
+}
+.auth-select-element {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.contact-number-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 22.33rem;
+}
+.phone-select {
+  margin-top: 2rem;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+
+.phone-input {
+  width: 16.12rem;
+  height: 2.12rem;
+  margin-top: 2rem;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-bottom: 1px solid #000000;
+}
+
+.phone-input::placeholder {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+button{
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: #00ADEF;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 2rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+p a {
+  color: #0873BB;
+  cursor: pointer;
+}
