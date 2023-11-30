@@ -108,3 +108,21 @@ button{
   color: #0873BB;
   cursor: pointer;
 }
+
+.forget-password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 23rem;
+  margin-top: 2rem;
+}
+
+.forget-password span {
+  color: #00ADEF;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
