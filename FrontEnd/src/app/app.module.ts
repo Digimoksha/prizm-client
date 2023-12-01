@@ -10,6 +10,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { OtpVerificationComponent } from './auth/otp-verification/otp-verification.component';
 import { LoginComponent } from './auth/login/login.component';
 import { GstInputComponent } from './auth/gst-input/gst-input.component';
+import { SignupBusinessDetailsComponent } from './auth/seller/signup-business-details/signup-business-details.component';
+import { BankDetailsComponent } from './auth/seller/bank-details/bank-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { GstInputComponent } from './auth/gst-input/gst-input.component';
     SignupComponent,
     OtpVerificationComponent,
     LoginComponent,
-    GstInputComponent
+    GstInputComponent,
+    SignupBusinessDetailsComponent,
+    BankDetailsComponent
   ],
   imports: [
     BrowserModule,

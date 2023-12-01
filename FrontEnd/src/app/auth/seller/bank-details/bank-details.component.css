@@ -1,0 +1,157 @@
+
+.main-auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.auth-card {
+  width: 89rem;
+  height: 44rem;
+  border-radius: 2rem;
+}
+.title {
+  margin-left: 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.auth-form-container {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 2rem;
+}
+
+button {
+
+  height: 2.5rem;
+  border-radius: 2rem;
+  /* margin-top: 2rem; */
+
+font-weight: 700;
+cursor: pointer;
+}
+#continue-btn{
+  width: 8rem;
+  background-color: #00ADEF;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#back-btn {
+  width: 6rem;
+border: 0.1rem solid #00ADEF;
+color: #00ADEF;
+background-color: white;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.logo img {
+  width: 9rem;
+
+}
+
+.input-container {
+  position: relative;
+}
+input {
+  height: 1rem;
+  width: 21rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.upload-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.gst-name-input-container input {
+   /* Adjust based on the icon size */
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+}
+.gst-input-container input {
+  background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.pan-input-container input {
+  background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.tin-input-container input {
+  background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.account-holder-name-input-container input {
+   /* Adjust based on the icon size */
+  background: url('../../../../assets/owner-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+
+
+
+.bank-input-container input {
+  background: url('../../../../assets/bank-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.account-number-input-container input {
+  background: url('../../../../assets/account-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.confirm-account-number-input-container input {
+  background: url('../../../../assets/account-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.ifsc-input-container input {
+  background: url('../../../../assets/ifsc.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
+.email-input-container input {
+  background: url('../../../../assets/email-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  text-indent: 1.75rem;
+}
