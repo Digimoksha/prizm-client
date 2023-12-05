@@ -8,6 +8,8 @@ import { SignupBusinessDetailsComponent } from './auth/seller/signup-business-de
 import { BankDetailsComponent } from './auth/seller/bank-details/bank-details.component';
 import { BuyerSocietyDetailsComponent } from './auth/buyer/buyer-society-details/buyer-society-details.component';
 import { BuyerUserAdditionComponent } from './auth/buyer/buyer-user-addition/buyer-user-addition.component';
+import { BuyerDashboardComponent } from './dashboard/buyer-dashboard/buyer-dashboard.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const routes: Routes = [
   {path:'',redirectTo: '', pathMatch: 'full'},
@@ -18,8 +20,8 @@ const routes: Routes = [
   {path: 'seller-business-details', component: SignupBusinessDetailsComponent},
   {path: 'seller-bank-details', component: BankDetailsComponent},
   {path: 'society-details', component: BuyerSocietyDetailsComponent},
-  {path: 'user-addition', component: BuyerUserAdditionComponent}
-  // {path: 'country-map', component: CountryMapChartComponent}
+  {path: 'user-addition', component: BuyerUserAdditionComponent},
+  {path: 'buyer-dashboard', component: BuyerDashboardComponent},  {path: 'navbar', component: NavbarComponent}
 ];
 
 @NgModule({

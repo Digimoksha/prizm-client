@@ -1,0 +1,86 @@
+.main-dashboard-container {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding-top: 2rem;
+  width: 90%;
+}
+.RFQ-main-container, .PO-main-container, .payments-main-container {
+  width: 28.75rem;
+}
+.RFQ-id-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#lowest-bid-text {
+  width: 10rem;
+  background-color: #16C09861;
+  color: #008767;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.title {
+  color: #707070;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+mat-card {
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+.divider {
+  width: 95%;
+  background-color: #DEDEDE;
+  height: .02rem;
+  margin: auto;
+}
+
+.bid-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.RFQ-container, .PO-container, .payments-container {
+  margin: 1rem;
+}
+
+.item-name {
+  padding-top: 0.5rem;
+}
+.item-name, .expiry-detail {
+  color: #707070;
+}
+.company-info {
+  padding-top: 1rem;
+}
+.only-RFQ-id, .PO-RFQ-id, .bid-count, .expiry-detail, .company-info, .approver-info, .payment-status-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.approver-info {
+  padding-top: 0.75rem;
+}
+#RFQ-id, #PO-id {
+  color: #67BE44;
+}
+#RFQ-id-part, #company-name, #approver-name, #payment-status {
+  color: #707070;
+}
+.green-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #67BE44;
+}
