@@ -83,39 +83,40 @@ input {
   justify-content: space-between;
   gap: 1rem;
 }
-.gst-name-input-container input {
-   /* Adjust based on the icon size */
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+.society-name-input-container input {
+  background: url('../../../../assets/society-name-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
+  text-indent: 1.75rem;
 }
 .gst-input-container input {
   background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .pan-input-container input {
   background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .tin-input-container input {
   background: url('../../../../assets/upload-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .account-holder-name-input-container input {
-   /* Adjust based on the icon size */
+
   background: url('../../../../assets/owner-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 
@@ -123,36 +124,82 @@ input {
 
 .bank-input-container input {
   background: url('../../../../assets/bank-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .account-number-input-container input {
   background: url('../../../../assets/account-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .confirm-account-number-input-container input {
   background: url('../../../../assets/account-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .ifsc-input-container input {
   background: url('../../../../assets/ifsc.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }
 .email-input-container input {
   background: url('../../../../assets/email-icon.svg') no-repeat left 10px center;
-  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  background-size: 1rem 1rem;
   padding: 0.75rem;
-  border: 1px solid #DEDEDE; /* Optional: Add border for better visibility */
+  border: 1px solid #DEDEDE;
+  text-indent: 1.75rem;
+}
+
+.address-subpart-input-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 28rem;
+  gap: 1rem;
+}
+.address-subpart-input-container input {
+  height: 1rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+}
+.address-subpart-input-container select {
+  height: 2.65rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.address-input-container {
+  height: 6rem;
+}
+.address-input-container textarea {
+  width: 35rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  background: url('../../../../assets/address-icon.svg') no-repeat 10px 0.8rem;
+  background-size: 1rem 1rem;
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE;
+  text-indent: 1.75rem;
+  outline: none;
+}
+.address-subpart-input-container input,select {
+  background-size: 1rem 1rem;
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE;
+}
+
+.contact-input-container input {
+  background: url('../../../../assets/contact-icon.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem;
+  padding: 0.75rem;
+  border: 1px solid #DEDEDE;
   text-indent: 1.75rem;
 }

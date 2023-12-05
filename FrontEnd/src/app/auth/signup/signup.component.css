@@ -12,14 +12,7 @@
   align-items: center;
   border-radius: 2rem;
 }
-.auth-form-container {
-  width: 23rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-}
+
 form {
   display: flex;
   flex-direction: column;
@@ -43,6 +36,7 @@ form {
   width: 22.33rem;
 }
 .phone-select {
+  width: 4rem;
   margin-top: 2rem;
   border-left: none;
   border-right: none;
@@ -54,7 +48,7 @@ form {
 }
 
 .phone-input {
-  width: 16.12rem;
+  width: 17rem;
   height: 2.12rem;
   margin-top: 2rem;
   border-left: none;

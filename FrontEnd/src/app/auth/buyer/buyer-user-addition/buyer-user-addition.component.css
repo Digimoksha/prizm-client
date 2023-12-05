@@ -1,0 +1,8 @@
+.add-user-main-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.hidden-text {
+  visibility: hidden;
+}
