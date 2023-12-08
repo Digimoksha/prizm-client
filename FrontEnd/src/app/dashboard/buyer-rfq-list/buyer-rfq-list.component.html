@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<div class="title-container">
+  <div class="title">
+    <h2>RFQs</h2>
+    <span id="dashboard-text">Dashboard</span><span id="rfq-text">/My RFQs</span>
+  </div>
+    <div><button class="create-rfq-btn">Create RFQ</button></div>
+</div>
+<div class="mat-elevation-z8">
+  <div class="rfq-status-nav-main-container">
+    <div class="rfq-status-nav">
+      <button class="status-btn" (click)="onTabClick('ACTIVE')" [class.selected]="selectedStatus === 'ACTIVE'">Active</button>
+      <button class="status-btn" (click)="onTabClick('DRAFT')" [class.selected]="selectedStatus === 'DRAFT'">Draft</button>
+      <button class="status-btn" (click)="onTabClick('COMPLETED')" [class.selected]="selectedStatus === 'COMPLETED'">Completed</button>
+      <button class="status-btn" (click)="onTabClick('All')" [class.selected]="selectedStatus === 'All'">All</button>
+    </div>
+    <div>
+
+      <input id="search-input" (keyup)="applyFilter($event)" matInput placeholder="Search" #input>
+
+    <select class="filter-select">
+      <option style="background-color: #7E7E7E;"><span>Sort by :</span><span id="filter-type">Newest</span></option>
+    </select>
+  </div>
+  </div>
+  <table mat-table [dataSource]="filteredDataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="RFQ ID">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> RFQ ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.rfqId}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="RFQ Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> RFQ Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.rfqName}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> Description </th>
+      <td mat-cell *matCellDef="let row"> {{row.description}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title">
+        <ng-container *ngIf="selectedStatus === 'All'">Status</ng-container> </th>
+      <td mat-cell *matCellDef="let row"> <div [ngClass]="{'active-status': row.status=== 'ACTIVE', 'draft-status': row.status=== 'DRAFT', 'inactive-status': row.status=== 'INACTIVE'}">
+        <ng-container *ngIf="selectedStatus === 'All'">{{row.status}}</ng-container></div> </td>
+    </ng-container>
+
+    <!-- Fruit Column -->
+    <ng-container matColumnDef="Qty">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> Qty </th>
+      <td mat-cell *matCellDef="let row"> {{row.qty}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Bids">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> Bids </th>
+      <td mat-cell *matCellDef="let row"> {{row.bids}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Lowest Price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> Lowest Price </th>
+      <td mat-cell *matCellDef="let row"> {{row.lowestPrice}} </td>
+    </ng-container>
+    <ng-container matColumnDef="RFQ Date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-title"> RFQ Date </th>
+      <td mat-cell *matCellDef="let row"> {{row.rfqDate}} </td>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+

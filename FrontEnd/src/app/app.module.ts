@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -9,6 +9,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
 import { OtpVerificationComponent } from './auth/otp-verification/otp-verification.component';
 import { LoginComponent } from './auth/login/login.component';
 import { GstInputComponent } from './auth/gst-input/gst-input.component';
@@ -19,6 +22,8 @@ import { BuyerUserAdditionComponent } from './auth/buyer/buyer-user-addition/buy
 import { SellerDashboardComponent } from './dashboard/seller-dashboard/seller-dashboard.component';
 import { BuyerDashboardComponent } from './dashboard/buyer-dashboard/buyer-dashboard.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
+import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +38,22 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     BuyerUserAdditionComponent,
     SellerDashboardComponent,
     BuyerDashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    BuyerRfqListComponent,
+    BuyerRfqCreationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CommonModule,
     MatCardModule,
     MatCheckboxModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

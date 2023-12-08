@@ -1,0 +1,75 @@
+.title-container {
+  width: 85%;
+}
+.create-rfq-card{
+  height: 44rem;
+  width: 85%;
+  margin: auto;
+  border-radius: 2rem;
+}
+.create-rfq-form {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 49%;
+}
+input, textarea {
+  width: 29.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 0.1rem solid #5555554D;
+  text-indent: 1rem;
+
+}
+input {
+  height: 2rem;
+}
+textarea {
+  height: 4rem;
+}
+#quote-date input {
+  height: 2rem;
+  width: 14rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 0.1rem solid #5555554D;
+background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center;
+}
+ #expected-delivery-date input {
+    height: 2rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 0.1rem solid #5555554D;
+  background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center;
+}
+.choose-file-container{
+  width: 29.5rem;
+  height: 10rem;
+  background-color: #F8F8F8;
+  border: 0.1rem solid #5555554D;
+  border-radius: 0.5rem;
+}
+.date-container {
+  display: flex;
+  gap: 1rem;
+}
+
+
+#choose-file-input {
+  margin: 3rem 4rem;
+}
+#choose-file-input input {
+  height: 3rem;
+  width: 20rem;
+  border: none;
+}
+
+#choose-file-input input::placeholder
+{
+  font-size: 2;
+}

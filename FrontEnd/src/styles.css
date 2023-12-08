@@ -52,3 +52,54 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   margin: 0 5rem;
 }
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 1rem auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+#dashboard-text, #rfq-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+#dashboard-text {
+  color: #00ADEF;
+}
+
+
+#rfq-text {
+  color: #707070;
+}
+.create-rfq-btn{
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: #00ADEF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+}
+.download-template-btn{
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  border: 0.1rem solid #00ADEF;
+  color: #00ADEF;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+}

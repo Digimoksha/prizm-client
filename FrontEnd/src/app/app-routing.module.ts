@@ -10,6 +10,8 @@ import { BuyerSocietyDetailsComponent } from './auth/buyer/buyer-society-details
 import { BuyerUserAdditionComponent } from './auth/buyer/buyer-user-addition/buyer-user-addition.component';
 import { BuyerDashboardComponent } from './dashboard/buyer-dashboard/buyer-dashboard.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
+import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
 
 const routes: Routes = [
   {path:'',redirectTo: '', pathMatch: 'full'},
@@ -21,7 +23,10 @@ const routes: Routes = [
   {path: 'seller-bank-details', component: BankDetailsComponent},
   {path: 'society-details', component: BuyerSocietyDetailsComponent},
   {path: 'user-addition', component: BuyerUserAdditionComponent},
-  {path: 'buyer-dashboard', component: BuyerDashboardComponent},  {path: 'navbar', component: NavbarComponent}
+  {path: 'buyer-dashboard', component: BuyerDashboardComponent},
+   {path: 'navbar', component: NavbarComponent},
+   {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
+   {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent}
 ];
 
 @NgModule({
