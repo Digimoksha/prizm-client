@@ -13,11 +13,14 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
 import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
+import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
+import { PasswordFormComponent } from './auth/password-form/password-form.component';
 
 const routes: Routes = [
   {path:'',redirectTo: '', pathMatch: 'full'},
   {path: 'signup', component: SignupComponent},
   {path: 'otp-verification', component: OtpVerificationComponent},
+  {path: 'password-form', component: PasswordFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'gst-input', component: GstInputComponent},
   {path: 'seller-business-details', component: SignupBusinessDetailsComponent},
@@ -28,7 +31,8 @@ const routes: Routes = [
    {path: 'navbar', component: NavbarComponent},
    {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
    {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent},
-   {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent}
+   {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent},
+   {path: 'buyer-payment-detail', component: BuyerPaymentsComponent}
 ];
 
 @NgModule({
