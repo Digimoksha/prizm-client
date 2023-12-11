@@ -47,6 +47,7 @@ export class BuyerRfqListComponent implements OnInit {
   }
   updateDataSource(){
     if(this.selectedStatus === 'All'){
+      console.log(this.dataSource)
       this.filteredDataSource=this.ELEMENT_DATA
     }else{
       this.filteredDataSource =this.ELEMENT_DATA.filter(item=> item.status === this.selectedStatus)
@@ -54,6 +55,7 @@ export class BuyerRfqListComponent implements OnInit {
 
   }
    applyFilter(event: Event) {
+    console.log(this.filteredDataSource)
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 

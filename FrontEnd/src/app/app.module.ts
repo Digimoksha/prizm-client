@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -24,6 +24,7 @@ import { BuyerDashboardComponent } from './dashboard/buyer-dashboard/buyer-dashb
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
 import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
+import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
     BuyerDashboardComponent,
     NavbarComponent,
     BuyerRfqListComponent,
-    BuyerRfqCreationComponent
+    BuyerRfqCreationComponent,
+    BuyerRfqDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatInputModule
+    MatInputModule,
+    CurrencyPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

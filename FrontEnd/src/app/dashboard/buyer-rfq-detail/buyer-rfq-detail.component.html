@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<div class="title-container">
+  <div class="title">
+    <h2>RFQs</h2>
+    <span id="dashboard-text">Dashboard</span><span id="rfq-text">/My RFQs</span>
+  </div>
+    <div class="rfq-btn-container">
+      <button class="create-rfq-btn" id="download-btn">DOWNLOAD</button>
+      <button class="create-rfq-btn" id="print-btn">PRINT</button>
+    </div>
+</div>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef class="checkbox-header">
+        <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()"
+                      [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row" class="checkbox-data">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)"
+                      [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="Item Name">
+      <th mat-header-cell *matHeaderCellDef> Item Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.itemName}} </td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Brand">
+      <th mat-header-cell *matHeaderCellDef> Brand </th>
+      <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Qty">
+      <th mat-header-cell *matHeaderCellDef> Qty </th>
+      <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Store1">
+      <th mat-header-cell *matHeaderCellDef class="company-header"> Om Sai Hardware </th>
+      <td mat-cell *matCellDef="let element" class="company-data"> {{element.store1}} </td>
+      <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Store2">
+      <th mat-header-cell *matHeaderCellDef class="company-header"> The Hardware Store </th>
+      <td mat-cell *matCellDef="let element" class="company-data"> {{element.store2}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Store3">
+      <th mat-header-cell *matHeaderCellDef class="company-header"> Yogi Hardware </th>
+      <td mat-cell *matCellDef="let element" class="company-data"> {{element.store3}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="selection.toggle(row)">
+    </tr>
+    <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns" class="header-row"></tr> -->
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+</div>

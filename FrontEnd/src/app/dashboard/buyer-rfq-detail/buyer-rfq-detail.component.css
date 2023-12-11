@@ -1,0 +1,56 @@
+.checkbox-header, .checkbox-data {
+  width: 1%;
+  padding: 0;
+  text-align: start;
+}
+.company-header, .company-data {
+ padding: 0;
+}
+.header-row {
+  position: relative;
+  background-color: #809CAB;
+  color: #FFFFFF; /* Set the background color to green */
+  /* -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s; */
+}
+
+mat-checkbox {
+color: #0873BB;
+}
+/* Add this style in your component's CSS file or the global styles.css file */
+
+/* Header Checkbox */
+.mdc-checkbox--selected {
+  background-color: #0873BB !important;
+}
+
+/* Data Checkbox */
+:host ::ng-deep .checkbox-data.mat-checkbox {
+  border-color: #0873BB !important;
+}
+
+.rfq-btn-container {
+  display: flex;
+  gap: 1rem;
+}
+/* Change the color value to your desired color */
+.create-rfq-btn{
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  color: #00ADEF;
+  background-color: #FFFFFF;
+  border: 0.1rem solid #00ADEF;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+}
+#dowload-btn {
+  width: 9rem;
+}
+#print-btn {
+  width: 7rem;
+}
+

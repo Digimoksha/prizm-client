@@ -12,6 +12,7 @@ import { BuyerDashboardComponent } from './dashboard/buyer-dashboard/buyer-dashb
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
 import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
+import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 
 const routes: Routes = [
   {path:'',redirectTo: '', pathMatch: 'full'},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'buyer-dashboard', component: BuyerDashboardComponent},
    {path: 'navbar', component: NavbarComponent},
    {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
-   {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent}
+   {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent},
+   {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent}
 ];
 
 @NgModule({
