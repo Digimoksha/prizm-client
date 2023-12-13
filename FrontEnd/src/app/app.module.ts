@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, CurrencyPipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -25,10 +27,13 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BuyerRfqListComponent } from './dashboard/buyer-rfq-list/buyer-rfq-list.component';
 import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-rfq-creation.component';
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoaderComponent,
     SignupComponent,
     OtpVerificationComponent,
     LoginComponent,
@@ -47,6 +52,9 @@ import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     CommonModule,
     MatCardModule,

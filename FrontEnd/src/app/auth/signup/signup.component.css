@@ -82,3 +82,11 @@ p a {
   color: #0873BB;
   cursor: pointer;
 }
+
+.error-container {
+  color: firebrick;
+   height: auto; /* before 1.25Rrem; */
+  width: 20rem;
+  font-size: 1rem;
+  margin-left: 10rem;
+}

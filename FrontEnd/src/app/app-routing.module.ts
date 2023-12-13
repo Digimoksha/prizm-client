@@ -15,9 +15,9 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 
 const routes: Routes = [
-  {path:'',redirectTo: '', pathMatch: 'full'},
+  {path:'',redirectTo: 'login', pathMatch: 'full'},
   {path: 'signup', component: SignupComponent},
-  {path: 'otp-verification', component: OtpVerificationComponent},
+  {path: 'otp-verification/:memberId', component: OtpVerificationComponent},
   {path: 'login', component: LoginComponent},
   {path: 'gst-input', component: GstInputComponent},
   {path: 'seller-business-details', component: SignupBusinessDetailsComponent},
