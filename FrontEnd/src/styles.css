@@ -52,7 +52,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   margin: 0 5rem;
 }
-.title-container {
+.dashboard-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,4 +102,9 @@ h2 {
   font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.08rem;
+}
+.mat-elevation-z8 {
+  margin-top: 4rem;
+  width: 95%;
+  margin: auto;
 }

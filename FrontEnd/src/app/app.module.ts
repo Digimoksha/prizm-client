@@ -29,6 +29,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
+import { PasswordFormComponent } from './auth/password-form/password-form.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     NavbarComponent,
     BuyerRfqListComponent,
     BuyerRfqCreationComponent,
-    BuyerRfqDetailComponent
+    BuyerRfqDetailComponent,
+    BuyerPaymentsComponent,
+    PasswordFormComponent
   ],
   imports: [
     BrowserModule,

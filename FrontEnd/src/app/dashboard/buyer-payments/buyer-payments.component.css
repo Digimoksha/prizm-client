@@ -1,0 +1,94 @@
+/* .mat-elevation-z8 {
+  margin-top: 4rem;
+  width: 95%;
+  margin: auto;
+}
+ */
+
+
+.dashboard-nav-main-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 95%;
+  height: 5rem;
+  margin: auto;
+}
+.rfq-status-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.status-btn {
+  width: 6rem;
+  height: 3rem;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.status-btn.selected {
+  background-color: #00ADEF;
+  color: #FFFFFF;
+  border-radius: 0.4rem;
+}
+
+#search-input {
+  background: url('../../../assets/search.svg') no-repeat left 10px center;
+  background-size: 1rem 1rem; /* Adjust based on the icon size */
+  padding: 0.75rem;
+  text-indent: 1.75rem;
+  height: 1.2rem;
+  outline: none;
+}
+
+.filter-select,
+#search-input {
+  background-color: #F9FBFF;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.filter-select {
+  height: 2.5rem;
+  outline: none;
+}
+table {
+  width: 100%;
+}
+
+
+
+td, th {
+  width: 13%;
+}
+.header-row {
+  position: relative;
+  background-color: #809CAB;
+  color: #FFFFFF; /* Set the background color to green */
+  /* -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s; */
+}
+
+.active-status, .draft-status, .inactive-status {
+width: 4rem;
+text-align: center;
+border-radius: 0.2rem;
+font-size: 0.75rem;
+font-weight: 500;
+}
+.active-status
+{
+  background-color: #16C09861;
+  color: #008767;
+}
+.draft-status {
+  background-color: #1679C061;
+  color: #000D87;
+}
+
+.inactive-status {
+  background-color: #C2C2C261;
+  color: #898989;
+}
