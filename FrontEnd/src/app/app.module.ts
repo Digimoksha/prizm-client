@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
+import { AuthInterceptor } from './shared/authconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,13 @@ import { PasswordFormComponent } from './auth/password-form/password-form.compon
     MatInputModule,
     CurrencyPipe
   ],
-  providers: [],
+  providers:  [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

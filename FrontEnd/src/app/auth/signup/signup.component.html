@@ -13,12 +13,10 @@
           <select class="auth-select-element" name="memberTypeId" ngModel>
             <option value="">Select Role</option>
             <option *ngFor="let memberType of memberTypes" [value]="memberType.id" >{{ memberType.type }}</option>
-            
           </select>
           <div class="contact-number-container">
             <select class="phone-select" name="countryCode" [ngModel]="91">
               <option [ngValue]="91" sele><img src="../../../assets/nation-flag.svg">+91</option>
-              
             </select>
             <input class="phone-input" placeholder="Phone" name="phoneNumber" ngModel>
           </div>

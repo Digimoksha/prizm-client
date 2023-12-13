@@ -11,16 +11,19 @@
     <div id="signin-text">Sign in to continue to PRISM.</div>
   </div>
       <div class="auth-form-container">
-        <form>
-          <select class="auth-select-element">
-            <option>Select Role</option>
-            <option>Seller</option>
-            <option>Buyer</option>
+        <div class="error-container" *ngIf="isErrorFound">{{errorMessage}}</div>
+        <form #login="ngForm" (ngSubmit)="onLogin(login)">
+          <select class="auth-select-element" name="memberTypeId" ngModel>
+            <option value="">Select Role</option>
+            <option *ngFor="let memberType of memberTypes" [value]="memberType.id" >{{ memberType.type }}</option>
           </select>
-
-            <input class="input-container" id="email-input" type="email" placeholder="Email">
-
-            <input class="input-container" id="password-input" type="password" placeholder="Password">
+          <div class="contact-number-container">
+            <select class="phone-select" name="countryCode" [ngModel]="91">
+              <option [ngValue]="91" sele><img src="../../../assets/nation-flag.svg">+91</option>
+            </select>
+            <input class="phone-input" placeholder="Phone" name="phoneNumber" ngModel>
+          </div>
+            <input class="input-container" id="password-input" type="password" name="password" placeholder="Password" ngModel>
             <div class="forget-password">
               <mat-checkbox class="remember-me-text" [color]="color">Remember me</mat-checkbox>
               <span><a>Forgot Password</a></span>

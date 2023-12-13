@@ -10,46 +10,45 @@
       Society Details
     </div>
       <div class="auth-form-container">
-        <form>
+        <form #societyDetails="ngForm" (ngSubmit)="onSave(societyDetails)">
             <div class="society-name-input-container">
-              <input placeholder="Society Name">
+              <input type="text" placeholder="Society Name" id="societyName" name="societyName" ngModel>
             </div>
             <div class="address-input-container">
-              <textarea placeholder="Address"></textarea>
+              <textarea placeholder="Address" id="address" name="address" ngModel></textarea>
             </div>
             <div class="address-subpart-input-container">
-              <select>
-                <option>State</option>
-                <option>State1</option>
+              <select name="state" ngModel required>
+                <option value="" disabled>State</option>
+                <option *ngFor="let state of stateItems" [ngValue]="state.state_name">{{ state.state_name }}</option>
               </select>
-              <select>
-                <option>City</option>
-                <option>City1</option>
-              </select>
-              <input placeholder="Pin Code">
+              <input type="text" placeholder="City" id="city" name="city" ngModel />
+              <input type="text" placeholder="Pin Code" id="pincode" name="pincode" ngModel>
             </div>
             <div class="contact-input-container">
-              <input placeholder="Contact Number">
+              <input placeholder="Contact Number" type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="memberDetail.mobile_number" readonly>
             </div>
             <div class="email-input-container">
-              <input placeholder="Email Address">
+              <input placeholder="Email Address" type="text" id="email" name="email" ngModel>
             </div>
             <div class="account-holder-name-input-container">
-              <input placeholder="Admin Name">
+              <input placeholder="Admin Name" type="text" id="adminName" name="adminName" ngModel>
             </div>
             <div class="upload-main-container">
               <div class="pan-input-container">
-                <input placeholder="PAN">
+                <input placeholder="PAN" type="text" id="panNo" name="panNo" ngModel>
               </div>
               <div class="tin-input-container">
-                <input placeholder="TIN">
+                <input placeholder="TIN" type="text" id="tinNo" name="tinNo" ngModel>
               </div>
               <div class="gst-input-container">
-                <input placeholder="GST">
+                <input placeholder="GST" type="text" id="gstNo" name="gstNo" ngModel>
               </div>
             </div>
+            <input type="hidden" id="memberId" name="memberId" [(ngModel)]="memberDetail.id" /> 
+            <input type="hidden" id="memberAddressId" name="memberAddressId" ngModel />
           <div class="btn">
-            <button id="back-btn">BACK</button>
+            <!-- <button id="back-btn">BACK</button> -->
             <button id="continue-btn">CONTINUE</button>
           </div>
         </form>

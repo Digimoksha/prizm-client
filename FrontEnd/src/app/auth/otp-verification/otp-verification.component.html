@@ -5,37 +5,35 @@
     <mat-card-header class="auth-header">
       <div class="logo"><img src="../../../assets/logo_hd.svg"></div>
     </mat-card-header>
-
-      <div class="auth-form-container">
-
-    <div class="role-notification">
-      <p id="role">I am a {{memberType}} <a>Change</a></p>
-    </div>
-        <form #otpValidator="ngForm" (ngSubmit)="verifyOTP(otpValidator)">
-          <div class="contact-number-container">
-            <select class="phone-select" name="countryCode" [ngModel]="91">
-              <option [ngValue]="91"><img src="../../../assets/nation-flag.svg">+91</option>
-            </select>
-            <div class="input-container">
-              <input type="number" class="phone-input" name="phoneNumber" value="{{memberDetail.mobile_number}}">
-              <img src="../../../assets/edit-icon.svg">
-            </div>
+    <div class="auth-form-container">
+      <div class="error-container" *ngIf="isErrorFound">{{errorMessage}}</div>
+      <div class="role-notification">
+        <p id="role">I am a {{memberType}} <a>Change</a></p>
+      </div>
+      <form #otpValidator="ngForm" (ngSubmit)="verifyOTP(otpValidator)">
+        <div class="contact-number-container">
+          <select class="phone-select" name="countryCode" [ngModel]="91">
+            <option [ngValue]="91"><img src="../../../assets/nation-flag.svg">+91</option>
+          </select>
+          <div class="input-container">
+            <input type="number" class="phone-input" name="phoneNumber" value="{{memberDetail.mobile_number}}">
+            <img src="../../../assets/edit-icon.svg">
           </div>
-          <div class="otp-input-container">
-            <input class="otp-input" pattern="\d" maxlength="6" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
-            <!-- <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
-            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
-            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
-            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
-            <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp"> -->
+        </div>
+        <div class="otp-input-container">
+          <input class="otp-input" pattern="\d" maxlength="6" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
+          <!-- <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
+          <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
+          <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
+          <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp">
+          <input class="otp-input" pattern="\d" maxlength="1" inputmode="numeric" autocomplete="one-time-code" ngModel name="otp"> -->
         </div>
         <input type="hidden" [ngModel]="memberDetail.id" name="memberId">
-          <button>VERIFY</button>
-        </form>
-        <div class="auth-notification">
-          <p>Didn’t recieve the code? <a>Resend</a></p>
-        </div>
+        <button>VERIFY</button>
+      </form>
+      <div class="auth-notification">
+        <p>Didn’t recieve the code? <a>Resend</a></p>
       </div>
+    </div>
   </mat-card>
-
 </div>

@@ -3,6 +3,14 @@ import { MemberService } from '../member.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
+interface otpResponse {
+  data: {
+    memberId : number
+  };
+  message: string;
+  status: boolean;
+}
+
 @Component({
   selector: 'app-otp-verification',
   templateUrl: './otp-verification.component.html',
@@ -17,6 +25,7 @@ export class OtpVerificationComponent {
   memberId : any = null;
   memberDetail : any = {};
   memberType : any = null
+  respData : otpResponse | undefined
 
   constructor(private memberService: MemberService, private route: ActivatedRoute,  private router: Router){}
 
@@ -40,9 +49,10 @@ export class OtpVerificationComponent {
       formDetail.memberId,
       formDetail.otp
     ).subscribe({
-    next: responseData=>{
-        console.log(responseData)
+    next: (respData : any) =>{
         this.isLoading = false
+        var memberId = respData.data.memberId
+        this.router.navigate([`/password-form/${memberId}`])
       },
       error: err=>{
         this.isErrorFound = true

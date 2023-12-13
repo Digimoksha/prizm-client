@@ -62,7 +62,6 @@ form {
 .contact-number-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 22.33rem;
 }
 .phone-select {
