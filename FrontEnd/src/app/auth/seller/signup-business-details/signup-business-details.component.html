@@ -10,41 +10,40 @@
       Business Details
     </div>
       <div class="auth-form-container">
-        <form>
+        <form #businessDetails="ngForm" (ngSubmit)="onSave(businessDetails)">
             <div class="gst-name-input-container">
-              <input placeholder="GST Number">
+              <input placeholder="GST Number" name="gstNo" ngModel>
             </div>
             <div class="owner-name-input-container">
-              <input placeholder="Owner Name">
+              <input placeholder="Owner Name" name="ownerName" [(ngModel)]="sellerData.ownerName">
             </div>
             <div class="address-input-container">
-              <textarea placeholder="Address"></textarea>
+              <textarea placeholder="Address" name="address" [(ngModel)]="sellerData.address"></textarea>
             </div>
             <div class="address-subpart-input-container">
-              <select>
-                <option>State</option>
-                <option>State1</option>
+              <select name="state" [(ngModel)]="sellerData.state" required>
+                <option value="" disabled>State</option>
+                <option *ngFor="let state of stateItems" [ngValue]="state.state_name">{{ state.state_name }}</option>
               </select>
-              <select>
-                <option>City</option>
-                <option>City1</option>
-              </select>
-              <input placeholder="Pin Code">
+              <input type="text" placeholder="City" id="city" name="city" [(ngModel)]="sellerData.city" />
+              <input type="text" placeholder="Pin Code" id="pincode" name="pincode" [(ngModel)]="sellerData.pincode">
             </div>
             <div class="contact-input-container">
-              <input placeholder="Contact Number">
+              <input placeholder="Contact Number" id="phoneNumber" name="phoneNumber" [(ngModel)]="memberDetail.mobile_number" readonly>
             </div>
             <div class="email-input-container">
-              <input placeholder="Email Address">
+              <input placeholder="Email Address" id="email" name="email" [(ngModel)]="sellerData.email">
             </div>
             <div class="business-name-input-container">
-              <input placeholder="Business Name">
+              <input placeholder="Business Name" id="businessName" name="businessName" [(ngModel)]="sellerData.businessName">
             </div>
             <div class="product-type-input-container">
-              <input placeholder="Product Type">
+              <input placeholder="Product Type" id="productType" name="productType" [(ngModel)]="sellerData.productType">
             </div>
+            <input type="hidden" id="memberId" name="memberId" [(ngModel)]="memberDetail.id" /> 
+            <input type="hidden" id="memberAddressId" name="memberAddressId" [(ngModel)]="sellerData.memberAddressId" />
           <div class="btn">
-            <button id="back-btn">BACK</button>
+            <button id="back-btn" type="button" (click)="backBtn()" >BACK</button>
             <button id="continue-btn">CONTINUE</button>
           </div>
         </form>

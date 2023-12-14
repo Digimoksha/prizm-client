@@ -18,6 +18,7 @@ import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payment
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
 import { AuthGuard } from "./shared/auth.guard";
 import { BuyerGuard } from './shared/buyer.guard';
+import { SellerDashboardComponent } from './dashboard/seller-dashboard/seller-dashboard.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'login', pathMatch: 'full'},
@@ -28,15 +29,16 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent},
   {path: 'gst-input', component: GstInputComponent},
   {path: 'seller-business-details/:memberId', component: SignupBusinessDetailsComponent},
-  {path: 'seller-bank-details', component: BankDetailsComponent},
+  {path: 'seller-bank-details/:memberId', component: BankDetailsComponent},
   {path: 'society-details/:memberId', component: BuyerSocietyDetailsComponent, canActivate: [AuthGuard,BuyerGuard]},
-  {path: 'user-addition', component: BuyerUserAdditionComponent},
+  {path: 'user-addition/:memberId', component: BuyerUserAdditionComponent},
   {path: 'buyer-dashboard/:memberId', component: BuyerDashboardComponent, canActivate: [AuthGuard,BuyerGuard]},
    {path: 'navbar', component: NavbarComponent},
    {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
    {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent},
    {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent},
-   {path: 'buyer-payment-detail', component: BuyerPaymentsComponent}
+   {path: 'buyer-payment-detail', component: BuyerPaymentsComponent},
+   {path: 'seller-dashboard/:memberId', component: SellerDashboardComponent},
 ];
 
 @NgModule({

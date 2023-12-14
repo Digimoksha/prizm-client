@@ -11,36 +11,37 @@
       Bank Details
     </div>
       <div class="auth-form-container">
-        <form>
+        <form #bankDetails="ngForm" (ngSubmit)="onSaveBankDetail(bankDetails)">
             <div class="gst-name-input-container">
               <input placeholder="GST Number">
             </div>
             <div class="account-holder-name-input-container">
-              <input placeholder="Account Holder">
+              <input placeholder="Account Holder" name="accountName" [(ngModel)]="sellerData.accountName">
             </div>
             <div class="bank-input-container">
-              <input placeholder="Bank Name">
+              <input placeholder="Bank Name" name="bankName" [(ngModel)]="sellerData.bankName">
             </div>
             <div class="account-number-input-container">
-              <input placeholder="Account Number">
+              <input placeholder="Account Number" name="accountNumber" [(ngModel)]="sellerData.accountNumber">
             </div>
             <div class="confirm-account-number-input-container">
-              <input placeholder="Confirm Account Number">
+              <input placeholder="Confirm Account Number" name="confirmAccountNumber" ngModel>
             </div>
             <div class="ifsc-input-container">
-              <input placeholder="IFSC Code">
+              <input placeholder="IFSC Code" name="ownerName" [(ngModel)]="sellerData.ifscCode">
             </div>
             <div class="upload-main-container">
               <div class="pan-input-container">
-                <input placeholder="PAN">
+                <input placeholder="PAN" name="panNo" [(ngModel)]="sellerData.panNo">
               </div>
               <div class="tin-input-container">
-                <input placeholder="TIN">
+                <input placeholder="TAN" name="tanNo" [(ngModel)]="sellerData.tanNo">
               </div>
               <div class="gst-input-container">
                 <input placeholder="GST">
               </div>
             </div>
+            <input type="hidden" id="memberId" name="memberId" [(ngModel)]="memberDetail.id" />
           <div class="btn">
             <button id="back-btn">BACK</button>
             <button id="continue-btn">CONTINUE</button>

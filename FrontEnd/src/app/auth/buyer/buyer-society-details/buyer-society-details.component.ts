@@ -55,7 +55,6 @@ export class BuyerSocietyDetailsComponent {
       }
     });
     this.memberId = this.route.snapshot.paramMap.get('memberId');
-    console.log(this.memberId)
     this.memberService.fetchMemberDetail(this.memberId)
     .subscribe({
       next: (respaData: any)=>{
@@ -75,8 +74,6 @@ export class BuyerSocietyDetailsComponent {
           city : memberAddress.location  ?? null,
           state : memberAddress.state  ?? null,
         }
-        
-        console.log(this.buyerData)
       }
     });
   }
@@ -101,8 +98,7 @@ export class BuyerSocietyDetailsComponent {
     ).subscribe({
     next: (respData : any) =>{
         this.isLoading = false
-        console.log(respData)
-        //this.router.navigate([`/buyer-dashboard/${respData.data.memberId}`])
+        this.router.navigate([`/user-addition/${respData.data.memberId}`])
       },
       error: err=>{
         this.isErrorFound = true
@@ -111,6 +107,10 @@ export class BuyerSocietyDetailsComponent {
         console.log(this.errorMessage)
       }
     })
+  }
+
+  backBtn() : void {
+    this.router.navigate([`/buyer-dashboard/${this.memberId}`])
   }
 
 }

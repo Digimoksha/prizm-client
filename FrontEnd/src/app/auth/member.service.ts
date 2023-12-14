@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+//import { JwtHelperService } from '@auth0/angular-jwt';
 
 interface SignUpResponse {
   data: {
@@ -73,8 +74,14 @@ export class MemberService {
       return localStorage.getItem('Authorization');
     }
     get isLoggedIn(): boolean {
-      let authToken = localStorage.getItem('Authorization');
-      return authToken !== null ? true : false;
+      let token = localStorage.getItem('Authorization');
+      
+      // if (token && !this.jwtHelper.isTokenExpired(token)) {
+      //   return true;
+      // } else {
+      //   return false;
+      // }
+      return token !== null ? true : false;
     }
 
     getMemberType(){
@@ -86,6 +93,40 @@ export class MemberService {
       return memberType == 'buyer' ? true : false;
     }
 
+    
+    saveSellerBusinessDetail(memberId:number,ownerName: string,address: string, state:string, city: string, pincode:string, email:string,businessName:string,productType:string,productTypeId:number, memberAddressId : null){
+      const sellerObj = {
+        member_id:memberId,
+        owner_name:ownerName,
+        address: address,
+        state:state,
+        city:city,
+        pincode:pincode,
+        email:email,
+        business_name: businessName,
+        product_type:productType,
+        product_type_id:productTypeId,
+        memberAddressId: memberAddressId
+      }
+      return this.http.post(`${this.baseUrl}/save-seller-details`,sellerObj)
+    }
+
+    fetchSellerDetail(memberId: number){
+      return this.http.get(`${this.baseUrl}/fetch-seller-detail/${memberId}`)
+    }
+
+    saveSellerBankDetail(memberId:number,accountName: string,bankName: string, accountNumber:string, ifscCode: string, tanNo:string, panNo:string){
+      const sellerObj = {
+        member_id:memberId,
+        account_name:accountName,
+        bank_name: bankName,
+        account_number:accountNumber,
+        ifsc_code:ifscCode,
+        tan_no:tanNo,
+        pan_no:panNo
+      }
+      return this.http.post(`${this.baseUrl}/save-seller-bank-details`,sellerObj)
+    }
     saveBuyerDetail(memberId:number,address: string, adminName: string, city: string, email:string,gstNo:string,tanNo:string,panNo:string,pincode:string,societyName:string,state:string,memberAddressId : null){
       const buyerObj = {
         member_id:memberId,
