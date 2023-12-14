@@ -34,10 +34,8 @@ export class OtpVerificationComponent {
     this.memberService.fetchMemberDetail(this.memberId)
     .subscribe({
       next: (respaData: any)=>{
-        this.memberDetail = respaData.data
-        this.memberType = this.memberDetail.memberType ? this.memberDetail.memberType.type : null
-        
-        console.log(this.memberDetail)
+        this.memberDetail = respaData.data;
+        this.memberType = this.memberDetail.memberType ? this.memberDetail.memberType.type : null;
       }
     });
   }

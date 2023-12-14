@@ -23,7 +23,20 @@ export class BuyerSocietyDetailsComponent {
   stateItems: State[] = []
   memberId : any = null;
   memberDetail : any = {};
-  memberType : any = null
+  buyerData  = {
+    memberId : null,
+    address : null, 
+    adminName : null,
+    city : null, 
+    email : null,
+    gstNo : null,
+    tanNo : null,
+    panNo : null,
+    pincode : null,
+    societyName : null,
+    state : null,
+    memberAddressId : null
+  };
 
   constructor(private memberService: MemberService,private commonService: CommonService, private route: ActivatedRoute,  private router: Router){}
 
@@ -42,13 +55,28 @@ export class BuyerSocietyDetailsComponent {
       }
     });
     this.memberId = this.route.snapshot.paramMap.get('memberId');
+    console.log(this.memberId)
     this.memberService.fetchMemberDetail(this.memberId)
     .subscribe({
       next: (respaData: any)=>{
-        this.memberDetail = respaData.data
-        this.memberType = this.memberDetail.memberType ? this.memberDetail.memberType.type : null
+        this.memberDetail = respaData.data;
+        const memberAddress = this.memberDetail.memberAddresses ? this.memberDetail.memberAddresses[0] ?? null : null;
+        this.buyerData  = {
+          memberId :  this.memberDetail.id ?? null,
+          societyName : respaData.data.name ?? null,
+          email  : respaData.data.email ?? null,
+          gstNo : this.memberDetail.buyerDetail ? this.memberDetail.buyerDetail.gst_no ?? null : null,
+          tanNo : this.memberDetail.buyerDetail ? this.memberDetail.buyerDetail.tan_no ?? null : null,
+          panNo : this.memberDetail.buyerDetail ? this.memberDetail.buyerDetail.pan_no ?? null : null,
+          adminName : this.memberDetail.buyerDetail ? this.memberDetail.buyerDetail.admin_name ?? null :null,
+          memberAddressId : memberAddress.id ?? null,
+          address : memberAddress.address  ?? null,
+          pincode : memberAddress.pincode  ?? null,
+          city : memberAddress.location  ?? null,
+          state : memberAddress.state  ?? null,
+        }
         
-        console.log(this.memberDetail)
+        console.log(this.buyerData)
       }
     });
   }
