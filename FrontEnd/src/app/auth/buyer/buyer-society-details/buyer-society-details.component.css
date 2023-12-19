@@ -44,19 +44,7 @@ button {
 font-weight: 700;
 cursor: pointer;
 }
-#continue-btn{
-  width: 8rem;
-  background-color: #00ADEF;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-#back-btn {
-  width: 6rem;
-border: 0.1rem solid #00ADEF;
-color: #00ADEF;
-background-color: white;
-}
+
 .logo-container {
   display: flex;
   flex-direction: column;

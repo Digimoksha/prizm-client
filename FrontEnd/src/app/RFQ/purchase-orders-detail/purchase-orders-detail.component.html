@@ -1,0 +1,243 @@
+<app-navbar></app-navbar>
+
+<div class="title">My RFQs</div>
+<div class="main-dashboard-container">
+
+<div class="RFQ-container">
+  <div class="PO-main-container">
+    <div>
+      <mat-card class="RFQ-PO-detail">
+          <div class="company-name">Om Sai</div>
+          <div class="address-container">
+            <div class="address">
+              <h4>Address</h4>
+              <p>143, Sunehri Market, Atta Sector 18, Noida 201301</p>
+            </div>
+            <div class="gst">
+              <span>GST: </span><p>11AKGTP7658N1JK</p><div> 0120 7654753</div><div> +91 86435 76543</div>
+            </div>
+          </div>
+          <div class="PO-table">
+            <table mat-table [dataSource]="dataSource">
+
+              <!-- Checkbox Column -->
+              <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                  <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                                [checked]="selection.hasValue() && isAllSelected()"
+                                [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                [aria-label]="checkboxLabel()">
+                  </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-checkbox (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)"
+                                [aria-label]="checkboxLabel(row)">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="item">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+                <td mat-footer-cell *matFooterCellDef> Total </td>
+              </ng-container>
+
+              <!-- Name Column -->
+              <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+              </ng-container>
+
+              <!-- Weight Column -->
+              <ng-container matColumnDef="qty">
+                <th mat-header-cell *matHeaderCellDef> qty </th>
+                <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+              </ng-container>
+
+              <!-- amount Column -->
+              <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> amount </th>
+                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                  (click)="selection.toggle(row)">
+              </tr>
+            </table>
+
+          </div>
+          <!-- <div class="btn-container">
+            <div class="btn-sub-container1">
+              <button id="add-item-btn" class="white-btn">ADD ITEM</button>
+            </div>
+            <div class="btn-sub-container2">
+              <button id="approval-btn" class="blue-btn">SEND FOR APPROVAL</button>
+              <button id="issue-po-btn" class="white-btn">ISSUE PO</button>
+            </div>
+          </div> -->
+      </mat-card>
+    </div>
+    </div>
+  <div class="PO-main-container">
+      <div>
+        <mat-card class="RFQ-PO-detail">
+            <div class="company-name">OM SAI</div>
+            <div class="address-container">
+              <div class="address">
+                <h4>Address</h4>
+                <p>143, Sunehri Market, Atta Sector 18, Noida 201301</p>
+              </div>
+              <div class="gst">
+                <span>GST: </span><p>11AKGTP7658N1JK</p><div> 0120 7654753</div><div> +91 86435 76543</div>
+              </div>
+            </div>
+            <div class="PO-table">
+              <table mat-table [dataSource]="dataSource">
+
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="select">
+                  <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                                  [checked]="selection.hasValue() && isAllSelected()"
+                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                  [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                  </th>
+                  <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()"
+                                  (change)="$event ? selection.toggle(row) : null"
+                                  [checked]="selection.isSelected(row)"
+                                  [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                  </td>
+                </ng-container>
+
+                <!-- item Column -->
+                <ng-container matColumnDef="item">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+                  <td mat-footer-cell *matFooterCellDef> Total </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="price">
+                  <th mat-header-cell *matHeaderCellDef> Price </th>
+                  <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                </ng-container>
+
+                <!-- qty Column -->
+                <ng-container matColumnDef="qty">
+                  <th mat-header-cell *matHeaderCellDef> qty </th>
+                  <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="amount">
+                  <th mat-header-cell *matHeaderCellDef> amount </th>
+                  <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                  <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                    (click)="selection.toggle(row)">
+                </tr>
+              </table>
+
+            </div>
+            <!-- <div class="btn-container">
+              <div class="btn-sub-container1">
+                <button id="add-item-btn" class="white-btn">ADD ITEM</button>
+              </div>
+              <div class="btn-sub-container2">
+                <button id="approval-btn" class="blue-btn">SEND FOR APPROVAL</button>
+                <button id="issue-po-btn" class="white-btn">ISSUE PO</button>
+              </div>
+            </div> -->
+        </mat-card>
+  </div>
+  </div>
+  <div class="PO-main-container">
+      <div>
+        <mat-card class="RFQ-PO-detail">
+            <div class="company-name">Om Sai</div>
+            <div class="address-container">
+              <div class="address">
+                <h4>Address</h4>
+                <p>143, Sunehri Market, Atta Sector 18, Noida 201301</p>
+              </div>
+              <div class="gst">
+                <span>GST: </span><p>11AKGTP7658N1JK</p><div> 0120 7654753</div><div> +91 86435 76543</div>
+              </div>
+            </div>
+            <div class="PO-table">
+              <table mat-table [dataSource]="dataSource">
+
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="select">
+                  <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                                  [checked]="selection.hasValue() && isAllSelected()"
+                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                  [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                  </th>
+                  <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()"
+                                  (change)="$event ? selection.toggle(row) : null"
+                                  [checked]="selection.isSelected(row)"
+                                  [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                  </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="item">
+                  <th mat-header-cell *matHeaderCellDef> Item </th>
+                  <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+                  <td mat-footer-cell *matFooterCellDef> Total </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="price">
+                  <th mat-header-cell *matHeaderCellDef> Price </th>
+                  <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="qty">
+                  <th mat-header-cell *matHeaderCellDef> Qty </th>
+                  <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="amount">
+                  <th mat-header-cell *matHeaderCellDef> Amount </th>
+                  <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                  <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                    (click)="selection.toggle(row)">
+                </tr>
+              </table>
+
+            </div>
+            <!-- <div class="btn-container">
+              <div class="btn-sub-container1">
+                <button id="add-item-btn" class="white-btn">ADD ITEM</button>
+              </div>
+              <div class="btn-sub-container2">
+                <button id="approval-btn" class="blue-btn">SEND FOR APPROVAL</button>
+                <button id="issue-po-btn" class="white-btn">ISSUE PO</button>
+              </div>
+            </div> -->
+        </mat-card>
+  </div>
+</div>
+</div>
+</div>

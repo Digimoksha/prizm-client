@@ -15,6 +15,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
+import { PurchaseOrdersDetailComponent } from './RFQ/purchase-orders-detail/purchase-orders-detail.component';
+import { PurchaseOrderStatusComponent } from './RFQ/purchase-order-status/purchase-order-status.component';
 
 const routes: Routes = [
   {path:'',redirectTo: '', pathMatch: 'full'},
@@ -32,7 +34,9 @@ const routes: Routes = [
    {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
    {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent},
    {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent},
-   {path: 'buyer-payment-detail', component: BuyerPaymentsComponent}
+   {path: 'buyer-payment-detail', component: BuyerPaymentsComponent},
+   {path: 'purchase-orders-detail', component: PurchaseOrdersDetailComponent},
+   {path: 'purchase-order-status', component: PurchaseOrderStatusComponent}
 ];
 
 @NgModule({

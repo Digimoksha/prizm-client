@@ -1,0 +1,168 @@
+.main-dashboard-container {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.RFQ-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  /* padding-top: 2rem; */
+  gap: 1rem;
+  width: 90%;
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  height: 3rem;
+  margin-left: 8rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.company-name {
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+.PO-main-container {
+  width: 28.75rem;
+}
+.RFQ-id-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#lowest-bid-text {
+  width: 10rem;
+  background-color: #16C09861;
+  color: #008767;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+.RFQ-PO-detail {
+  border-radius: 1rem;
+  padding-bottom: 2rem;
+}
+.divider {
+  width: 95%;
+  background-color: #DEDEDE;
+  height: .02rem;
+  margin: auto;
+}
+
+.bid-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.RFQ-container, .PO-container, .payments-container {
+  margin: 1rem;
+}
+
+.item-name {
+  padding-top: 0.5rem;
+}
+.item-name, .expiry-detail {
+  color: #707070;
+}
+.company-info {
+  padding-top: 1rem;
+}
+.only-RFQ-id, .PO-RFQ-id, .bid-count, .expiry-detail, .company-info, .approver-info, .payment-status-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.approver-info {
+  padding-top: 0.75rem;
+}
+#RFQ-id, #PO-id {
+  color: #67BE44;
+}
+#RFQ-id-part, #company-name, #approver-name, #payment-status {
+  color: #707070;
+}
+.green-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #67BE44;
+}
+
+.address-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.address {
+  font-weight: 400;
+  width: 45%;
+}
+.address h4 {
+  margin-left: 1rem;
+margin-top: 1rem;
+margin-bottom: 0;
+color: #B9B9B9;
+}
+.address p {
+  margin-top: 0;
+  margin-left: 1rem;
+  color: #7D7D7D;
+}
+.gst {
+  padding-top: 1rem;
+  color: #7D7D7D;
+  width: 40%;
+  padding-right: 1rem;
+}
+.gst span {
+  font-weight: bold;
+}
+.gst p {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header-row {
+  background-color: #F3F6F9;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-sub-container2 {
+  display: flex;
+  gap: 1rem;
+}
+button{
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+#approval-btn {
+  width: 11rem;
+}
+
+#add-item-btn {
+  width: 7rem;
+}
+#issue-po-btn {
+  width: 6rem;
+}
+table {
+  width: 100%;
+}
+
+tr.mat-mdc-footer-row td {
+  font-weight: bold;
+}
+

@@ -27,6 +27,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
+import { PurchaseOrdersDetailComponent } from './RFQ/purchase-orders-detail/purchase-orders-detail.component';
+import { PurchaseOrderStatusComponent } from './RFQ/purchase-order-status/purchase-order-status.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { PasswordFormComponent } from './auth/password-form/password-form.compon
     BuyerRfqCreationComponent,
     BuyerRfqDetailComponent,
     BuyerPaymentsComponent,
-    PasswordFormComponent
+    PasswordFormComponent,
+    PurchaseOrdersDetailComponent,
+    PurchaseOrderStatusComponent
   ],
   imports: [
     BrowserModule,
