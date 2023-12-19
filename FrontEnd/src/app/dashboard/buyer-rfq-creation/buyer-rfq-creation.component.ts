@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-buyer-rfq-creation',
@@ -6,5 +6,67 @@ import { Component } from '@angular/core';
   styleUrls: ['./buyer-rfq-creation.component.css']
 })
 export class BuyerRfqCreationComponent {
+  // private gapi: any
+  // constructor(private zone: NgZone){
+  //   // Ensure that the 'gapi' object is available in the global scope
+  //   this.zone.runOutsideAngular(() => {
+  //     const script = document.createElement('script');
+  //     script.src = 'https://apis.google.com/js/api.js';
+  //     script.type = 'text/javascript';
+  //     script.onload = () => {
+  //       this.gapi = window['gapi'];
+  //       this.onApiLoad();
+  //     };
+  //     document.head.appendChild(script);
+  //   });
+  // }
+  // private onApiLoad() {
+  //   // Your API loading logic here, for example, loading the Picker API
+  //   this.gapi.load('picker', { callback: this.onPickerApiLoad.bind(this) });
+  // }
+  // private onPickerApiLoad() {
+  //   // Now 'google' and 'gapi' should be recognized
+  //   this.selectFromGoogleDrive();
+  // }
 
+  // // Your other component logic
+
+  // selectFromGoogleDrive() {
+  //   this.gapi.load('auth', { 'callback': this.onAuthApiLoad.bind(this) });
+  //   this.gapi.load('picker');
+  // }
+  // onAuthApiLoad() {
+  //   gapi.auth.authorize(
+  //     {
+  //       'client_id': 'YOUR_GOOGLE_CLIENT_ID',
+  //       'scope': ['https://www.googleapis.com/auth/drive'],
+  //       'immediate': false,
+  //     },
+  //     this.handleAuthResult.bind(this)
+  //   );
+  // }
+
+  // handleAuthResult(authResult: any) {
+  //   if (authResult && !authResult.error) {
+  //     this.createPicker();
+  //   }
+  // }
+
+  // createPicker() {
+  //   const picker = new google.picker.PickerBuilder()
+  //     .addView(google.picker.ViewId.DOCS)
+  //     .setOAuthToken(gapi.auth.getToken().access_token)
+  //     .setDeveloperKey('YOUR_GOOGLE_DEVELOPER_KEY')
+  //     .setCallback(this.pickerCallback.bind(this))
+  //     .build();
+  //   picker.setVisible(true);
+  // }
+
+  // pickerCallback(data: any) {
+  //   if (data.action === google.picker.Action.PICKED) {
+  //     const fileId = data.docs[0].id;
+  //     // Use the fileId or perform further actions with the selected file
+  //     console.log('Selected File ID:', fileId);
+  //   }
+  // }
 }

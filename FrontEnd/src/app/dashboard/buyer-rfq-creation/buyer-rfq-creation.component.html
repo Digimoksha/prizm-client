@@ -4,7 +4,7 @@
     <h2>RFQs</h2>
     <span id="dashboard-text">Dashboard/My RFQs</span><span id="rfq-text">/Create RFQ</span>
   </div>
-    <div><button class="download-template-btn">DOWNLOAD TEMPLATE</button></div>
+    <!-- <div><button class="download-template-btn">DOWNLOAD TEMPLATE</button></div> -->
 </div>
 
 <div class="main-create-rfq-container">
@@ -19,11 +19,27 @@
     <input placeholder="Payment Terms">
     <textarea placeholder="Description"></textarea>
     <div class="choose-file-container">
-      <div id="choose-file-input"><input placeholder="Choose File"></div>
-      <div class="file-select-source"></div>
+      <div class="select-file-text">Drag a file here or</div>
+      <div class="select-file-area">
+        <div id="choose-file-input"><input placeholder="Choose File"></div>
+      <div class="file-select-source">
+        <!-- <button mat-icon-button (click)="selectFromGoogleDrive()"> -->
+          <button class="select-file-btn">
+            <img src="../../../assets/file-icon.svg">
+          </button>
+        <button class="select-file-btn">
+          <img src="../../../assets/dropbox-icon.svg">
+        </button>
+        <button class="select-file-btn">
+          <img src="../../../assets/google-drive-icon.svg">
+        </button>
+      </div>
+      </div>
     </div>
   </form>
 </div>
+<div style="margin-left: 2rem; margin-top: 2rem; color: #707070;font-family: 'Poppins', sans-serif;">or</div>
+<button class="blue-btn" style="margin-left: 2rem;">CREATE USING WIZARD</button>
   </mat-card>
 
 </div>

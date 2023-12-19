@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { OtpVerificationComponent } from './auth/otp-verification/otp-verification.component';
 import { LoginComponent } from './auth/login/login.component';
 import { GstInputComponent } from './auth/gst-input/gst-input.component';
@@ -60,6 +61,7 @@ import { PasswordFormComponent } from './auth/password-form/password-form.compon
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
+    MatIconModule,
     CurrencyPipe
   ],
   providers: [],
