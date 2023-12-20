@@ -1,5 +1,7 @@
 .title-container {
   width: 85%;
+  margin-left: 8rem;
+  margin-bottom: 1rem;
 }
 .create-rfq-card{
   height: 44rem;
@@ -48,28 +50,52 @@ background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center
   background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center;
 }
 .choose-file-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 29.5rem;
   height: 10rem;
   background-color: #F8F8F8;
   border: 0.1rem solid #5555554D;
   border-radius: 0.5rem;
 }
+
+.select-file-text {
+  color: #555555;
+  font-weight: 300;
+}
+
 .date-container {
   display: flex;
   gap: 1rem;
 }
 
 
-#choose-file-input {
-  margin: 3rem 4rem;
+#choose-file-input, .select-file-btn {
+  margin-top: 1rem;
 }
 #choose-file-input input {
   height: 3rem;
-  width: 20rem;
+  width: 14rem;
   border: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-#choose-file-input input::placeholder
-{
+#choose-file-input input::placeholder {
   font-size: 2;
 }
+
+.select-file-btn {
+  border: none;
+  background-color: #fff;
+  height: 3.15rem;
+  cursor: pointer;
+}
+.select-file-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

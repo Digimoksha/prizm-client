@@ -90,7 +90,7 @@ h2 {
   font-size: 1rem;
   letter-spacing: 0.08rem;
 }
-.download-template-btn{
+.white-btn{
   width: 11rem;
   height: 2.5rem;
   border-radius: 2rem;
@@ -98,6 +98,19 @@ h2 {
   background-color: white;
   border: 0.1rem solid #00ADEF;
   color: #00ADEF;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+}
+.blue-btn{
+  width: 14rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  margin-top: 0.75rem;
+  background-color: #00ADEF;
+  color: #FFF;
   cursor: pointer;
   font-weight: 500;
   font-size: 0.75rem;

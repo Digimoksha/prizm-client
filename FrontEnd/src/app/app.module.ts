@@ -14,6 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { OtpVerificationComponent } from './auth/otp-verification/otp-verification.component';
 import { LoginComponent } from './auth/login/login.component';
 import { GstInputComponent } from './auth/gst-input/gst-input.component';
@@ -61,7 +62,9 @@ import { AuthInterceptor } from './shared/authconfig.interceptor';
     FormsModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
+    FormsModule,
     CommonModule,
+    HttpClientModule,
     MatCardModule,
     MatCheckboxModule,
     MatDividerModule,
@@ -69,6 +72,7 @@ import { AuthInterceptor } from './shared/authconfig.interceptor';
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
+    MatIconModule,
     CurrencyPipe
   ],
   providers:  [
