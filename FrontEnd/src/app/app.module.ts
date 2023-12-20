@@ -29,6 +29,8 @@ import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payment
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
 import { PurchaseOrdersDetailComponent } from './RFQ/purchase-orders-detail/purchase-orders-detail.component';
 import { PurchaseOrderStatusComponent } from './RFQ/purchase-order-status/purchase-order-status.component';
+import { SideNavComponent } from './admin-buyer/side-nav/side-nav.component';
+import { UsersListComponent } from './admin-buyer/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { PurchaseOrderStatusComponent } from './RFQ/purchase-order-status/purcha
     BuyerPaymentsComponent,
     PasswordFormComponent,
     PurchaseOrdersDetailComponent,
-    PurchaseOrderStatusComponent
+    PurchaseOrderStatusComponent,
+    SideNavComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

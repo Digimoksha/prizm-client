@@ -1,0 +1,9 @@
+<mat-card class="nav-card">
+  <div class="admin-nav">
+    <button class="admin-nav-btn" (click)="onTabClick('Users')" [class.selected]="selectedTab === 'Users'">Users</button>
+    <button class="admin-nav-btn" (click)="onTabClick('Vendors')" [class.selected]="selectedTab === 'Vendors'">Vendors</button>
+    <button class="admin-nav-btn" (click)="onTabClick('RFQs')" [class.selected]="selectedTab === 'RFQs'">RFQs</button>
+    <button class="admin-nav-btn" (click)="onTabClick('Functions')" [class.selected]="selectedTab === 'Functions'">Functions</button>
+    <button class="admin-nav-btn" (click)="onTabClick('Purchase Orders')" [class.selected]="selectedTab === 'Purchase Orders'">Purchase Orders</button>
+  </div>
+</mat-card>
