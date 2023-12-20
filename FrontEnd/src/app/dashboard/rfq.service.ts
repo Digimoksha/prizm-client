@@ -7,16 +7,16 @@ import { Injectable } from '@angular/core';
 export class RfqService {
  baseUrl = `http://localhost:3001/api/v1`
   constructor(private http: HttpClient) { }
-  generateRfq(name: string,quote_date: string,expected_delivery_date: string,status: string,request_by: string,payment_terms: string,description: string){
-    // const rfqData = new FormData()
-    // rfqData.append("rfqName", rfqName)
-    // rfqData.append("quoteDate", quoteDate)
-    // rfqData.append("expectedDeliveryDate", expectedDeliveryDate)
-    // rfqData.append("status", status.toString())
-    // rfqData.append("requestBy", requestBy.toString())
-    // rfqData.append("paymentTerms", paymentTerms)
-    // rfqData.append("description", description)
-    // rfqData.append("recFile", file, file.name)
-    // return this.http.post(`${this.baseUrl}/rfq/generate`,rfqData)
+  generateRfq(name: string,quote_date: string,expected_delivery_date: string,status: string,request_by: string,payment_terms: string,description: string, file: File){
+     const rfqData = new FormData()
+     rfqData.append("name", name)
+     rfqData.append("quote_date", quote_date)
+     rfqData.append("expected_delivery_date", expected_delivery_date)
+     rfqData.append("status", status)
+     rfqData.append("request_by", request_by)
+     rfqData.append("payment_terms", payment_terms)
+     rfqData.append("description", description)
+     rfqData.append("recfile", file, file.name)
+     return this.http.post(`${this.baseUrl}/rfq/generate`,rfqData)
   }
 }

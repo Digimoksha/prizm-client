@@ -1,6 +1,7 @@
 import { Component, NgZone } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { RfqService } from '../rfq.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-buyer-rfq-creation',
@@ -8,7 +9,10 @@ import { RfqService } from '../rfq.service';
   styleUrls: ['./buyer-rfq-creation.component.css']
 })
 export class BuyerRfqCreationComponent {
-  constructor(private rfqService: RfqService){}
+  rfqFormData: any = {
+    file: null
+  }
+  constructor(private rfqService: RfqService, private route: ActivatedRoute,  private router: Router){}
   // private gapi: any
   // constructor(private zone: NgZone){
   //   // Ensure that the 'gapi' object is available in the global scope
@@ -72,21 +76,35 @@ export class BuyerRfqCreationComponent {
   //     console.log('Selected File ID:', fileId);
   //   }
   // }
+//buyerId = this.route.snapshot.paramMap.get('memberId')
   onFilePick(event: any){
-
+const file: File = event.target.files[0]
+this.rfqFormData.file = file
   }
   onSaveRfqDetail(rfqDetail: NgForm){
     const rfqData = rfqDetail.value
-    const status = 1
-    const requestedBy = 1
-    // this.rfqService.generateRfq(rfqData.rfqName, rfqData.quoteDate, rfqData.expectedDeliveryDate, status, requestedBy, rfqData.paymentTerms, rfqData.description, rfqData.file)
-    // .subscribe({
-    //   next: (responseData)=>{
-    //     console.log('data saved')
-    //   },
-    //   error: err=>{
-    //     console.log(err)
-    //   }
-    // })
+    const status = '0'
+    //if(this.buyerId){
+     // const requestedBy = this.buyerId.toString()
+      const requestedBy = "8"
+console.log(this.rfqFormData)
+        this.rfqFormData.name= rfqData.rfqName,
+        this.rfqFormData.quote_date= rfqData.quoteDate,
+        this.rfqFormData.expected_delivery_date= rfqData.expectedDeliveryDate,
+        this.rfqFormData.status= status,
+        this.rfqFormData.request_by= requestedBy,
+        this.rfqFormData.payment_terms= rfqData.paymentTerms,
+        this.rfqFormData.description= rfqData.description
+
+     this.rfqService.generateRfq(this.rfqFormData.name, this.rfqFormData.quote_date, this.rfqFormData.expected_delivery_date, this.rfqFormData.status, this.rfqFormData.request_by, this.rfqFormData.description, this.rfqFormData.payment_terms, this.rfqFormData.file)
+     .subscribe({
+       next: (responseData)=>{
+         console.log('data saved')
+       },
+       error: err=>{
+         console.log(err)
+       }
+     })
   }
+
 }

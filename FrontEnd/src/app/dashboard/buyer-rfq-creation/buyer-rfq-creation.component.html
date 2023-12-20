@@ -11,13 +11,13 @@
   <mat-card class="create-rfq-card">
 <div class="create-rfq-form">
   <form #rfqData = "ngForm" (ngSubmit)="onSaveRfqDetail(rfqData)">
-    <input placeholder="RFQ Name" name="rfqName">
+    <input placeholder="RFQ Name" name="rfqName" ngModel>
     <div class="date-container">
-      <div id="quote-date"><input placeholder="Quote Date" name="quoteDate"></div>
-    <div id="expected-delivery-date"><input placeholder="Expected Delivery Date" name="expectedDeliveryDate"></div>
+      <div id="quote-date"><input placeholder="Quote Date" name="quoteDate" ngModel></div>
+    <div id="expected-delivery-date"><input placeholder="Expected Delivery Date" name="expectedDeliveryDate" ngModel></div>
     </div>
-    <input placeholder="Payment Terms" name="paymentTerms">
-    <textarea placeholder="Description" name="description"></textarea>
+    <input placeholder="Payment Terms" name="paymentTerms" ngModel>
+    <textarea placeholder="Description" name="description" ngModel></textarea>
     <div class="choose-file-container">
       <div class="select-file-text">Drag a file here or</div>
       <div class="select-file-area">
@@ -36,7 +36,7 @@
       </div>
       </div>
     </div>
-    <button class="blue-btn" style="margin-left: 2rem;">GENERATE REPORT</button>
+    <button class="blue-btn" style="margin-left: 2rem;" type="submit">GENERATE REPORT</button>
   </form>
 </div>
 <div style="margin-left: 2rem; margin-top: 2rem; color: #707070;font-family: 'Poppins', sans-serif;">or</div>
