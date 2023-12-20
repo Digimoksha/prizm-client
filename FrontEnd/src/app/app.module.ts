@@ -28,6 +28,8 @@ import { BuyerRfqCreationComponent } from './dashboard/buyer-rfq-creation/buyer-
 import { BuyerRfqDetailComponent } from './dashboard/buyer-rfq-detail/buyer-rfq-detail.component';
 import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { PasswordFormComponent } from './auth/password-form/password-form.compon
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     CommonModule,
+    HttpClientModule,
     MatCardModule,
     MatCheckboxModule,
     MatDividerModule,

@@ -10,18 +10,18 @@
 <div class="main-create-rfq-container">
   <mat-card class="create-rfq-card">
 <div class="create-rfq-form">
-  <form>
-    <input placeholder="RFQ Name">
+  <form #rfqData = "ngForm" (ngSubmit)="onSaveRfqDetail(rfqData)">
+    <input placeholder="RFQ Name" name="rfqName">
     <div class="date-container">
-      <div id="quote-date"><input placeholder="Quote Date"></div>
-    <div id="expected-delivery-date"><input placeholder="Expected Delivery Date"></div>
+      <div id="quote-date"><input placeholder="Quote Date" name="quoteDate"></div>
+    <div id="expected-delivery-date"><input placeholder="Expected Delivery Date" name="expectedDeliveryDate"></div>
     </div>
-    <input placeholder="Payment Terms">
-    <textarea placeholder="Description"></textarea>
+    <input placeholder="Payment Terms" name="paymentTerms">
+    <textarea placeholder="Description" name="description"></textarea>
     <div class="choose-file-container">
       <div class="select-file-text">Drag a file here or</div>
       <div class="select-file-area">
-        <div id="choose-file-input"><input placeholder="Choose File"></div>
+        <div id="choose-file-input"><input type="file" placeholder="Choose File" (change)="onFilePick($event)" ngModel #fileInput="ngModel" name="file"></div>
       <div class="file-select-source">
         <!-- <button mat-icon-button (click)="selectFromGoogleDrive()"> -->
           <button class="select-file-btn">
@@ -36,6 +36,7 @@
       </div>
       </div>
     </div>
+    <button class="blue-btn" style="margin-left: 2rem;">GENERATE REPORT</button>
   </form>
 </div>
 <div style="margin-left: 2rem; margin-top: 2rem; color: #707070;font-family: 'Poppins', sans-serif;">or</div>

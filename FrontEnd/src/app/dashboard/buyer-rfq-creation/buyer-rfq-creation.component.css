@@ -77,7 +77,7 @@ background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center
 }
 #choose-file-input input {
   height: 3rem;
-  width: 10rem;
+  width: 14rem;
   border: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -98,3 +98,4 @@ background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center
   align-items: center;
   justify-content: center;
 }
+

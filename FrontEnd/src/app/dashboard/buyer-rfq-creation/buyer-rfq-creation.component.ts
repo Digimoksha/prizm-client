@@ -1,4 +1,6 @@
 import { Component, NgZone } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { RfqService } from '../rfq.service';
 
 @Component({
   selector: 'app-buyer-rfq-creation',
@@ -6,6 +8,7 @@ import { Component, NgZone } from '@angular/core';
   styleUrls: ['./buyer-rfq-creation.component.css']
 })
 export class BuyerRfqCreationComponent {
+  constructor(private rfqService: RfqService){}
   // private gapi: any
   // constructor(private zone: NgZone){
   //   // Ensure that the 'gapi' object is available in the global scope
@@ -69,4 +72,21 @@ export class BuyerRfqCreationComponent {
   //     console.log('Selected File ID:', fileId);
   //   }
   // }
+  onFilePick(event: any){
+
+  }
+  onSaveRfqDetail(rfqDetail: NgForm){
+    const rfqData = rfqDetail.value
+    const status = 1
+    const requestedBy = 1
+    // this.rfqService.generateRfq(rfqData.rfqName, rfqData.quoteDate, rfqData.expectedDeliveryDate, status, requestedBy, rfqData.paymentTerms, rfqData.description, rfqData.file)
+    // .subscribe({
+    //   next: (responseData)=>{
+    //     console.log('data saved')
+    //   },
+    //   error: err=>{
+    //     console.log(err)
+    //   }
+    // })
+  }
 }
