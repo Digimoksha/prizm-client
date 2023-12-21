@@ -33,6 +33,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BuyerPaymentsComponent } from './dashboard/buyer-payments/buyer-payments.component';
 import { PasswordFormComponent } from './auth/password-form/password-form.component';
 import { AuthInterceptor } from './shared/authconfig.interceptor';
+import { BuyerGenerateRfqWizardComponent } from './dashboard/buyer-generate-rfq-wizard/buyer-generate-rfq-wizard.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AuthInterceptor } from './shared/authconfig.interceptor';
     BuyerRfqCreationComponent,
     BuyerRfqDetailComponent,
     BuyerPaymentsComponent,
-    PasswordFormComponent
+    PasswordFormComponent,
+    BuyerGenerateRfqWizardComponent
   ],
   imports: [
     BrowserModule,

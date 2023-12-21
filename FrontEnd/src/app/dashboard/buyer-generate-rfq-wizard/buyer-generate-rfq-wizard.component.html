@@ -1,0 +1,30 @@
+<div class="rfq-wizard-main-container">
+<div class="title-text">
+<h2>Electrical Pipes | RFQ0001</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in consequat diam. Sed pulvinar et nulla ut vulputate. Suspendisse semper orci eget neque porttitor, sit amet suscipit justo facilisis.</p>
+</div>
+  <mat-card class="rfq-container-card">
+    <div class="col-names">
+      <div class="col-part-1">
+        <div>Item Name</div>
+      <div>Brand</div>
+      </div>
+      <div class="col-part-2">
+        <div>Quantity</div>
+      <div>Max Price</div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+   <div class="input-row" *ngFor="let rfqItemDeatil of rfqItemsDetailArr; let i = index">
+    <div class="input-controls">
+      <input id="item-name" [(ngModel)]="rfqItemDeatil.itemName">
+      <input id="brand" [(ngModel)]="rfqItemDeatil.brand">
+      <input id="qty" [(ngModel)]="rfqItemDeatil.qty">
+      <input id="max-price" [(ngModel)]="rfqItemDeatil.maxPrice">
+    </div>
+    <div class="delete-btn" (click)="onRemoveRow(i)"><span><i class="fa-solid fa-trash-can" style="color: #00ADEF; padding-left: 5px; padding-top: 4px;"></i></span></div>
+
+   </div>
+   <div><img id="add-btn" (click)="onAddRow()" src="../../../assets/add-user-icon.svg"></div>
+  </mat-card>
+</div>

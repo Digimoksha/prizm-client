@@ -1,0 +1,76 @@
+.rfq-wizard-main-container {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+}
+.rfq-container-card {
+height: 90%;
+border-radius: 1rem;
+}
+.title-text h2 {
+  font-size: 1.5rem;
+}
+.title-text p {
+  font-size: 1rem;
+}
+.rfq-container {
+  display: flex;
+  flex-direction: column;
+}
+.col-names, .input-controls {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 4rem;
+}
+.col-names {
+  gap: 16.7rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.col-part-1, .col-part-2 {
+  display: flex;
+}
+.col-part-1 {
+  gap: 14.7rem;
+}
+.col-part-2 {
+  gap: 6.5rem;
+}
+.input-controls {
+  gap: 4rem;
+}
+.input-controls input {
+  height: 1.75rem;
+  border-radius: 0.5rem;
+  border: 0.07rem #DEDEDE solid;
+  color: #707070;
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-indent: 0.5rem;
+}
+
+#item-name,#brand {
+width: 15rem;
+}
+
+#qty, #max-price {
+  width: 6rem;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#add-btn {
+  height: 60%;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+

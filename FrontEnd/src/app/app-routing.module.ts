@@ -19,6 +19,7 @@ import { PasswordFormComponent } from './auth/password-form/password-form.compon
 import { AuthGuard } from "./shared/auth.guard";
 import { BuyerGuard } from './shared/buyer.guard';
 import { SellerDashboardComponent } from './dashboard/seller-dashboard/seller-dashboard.component';
+import { BuyerGenerateRfqWizardComponent } from './dashboard/buyer-generate-rfq-wizard/buyer-generate-rfq-wizard.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'login', pathMatch: 'full'},
@@ -36,6 +37,7 @@ const routes: Routes = [
    {path: 'navbar', component: NavbarComponent},
    {path: 'buyer-rfq-list', component: BuyerRfqListComponent},
    {path: 'buyer-create-rfq', component: BuyerRfqCreationComponent},
+   {path: 'buyer-generate-rfq-wizard', component: BuyerGenerateRfqWizardComponent},
    {path: 'buyer-rfq-detail', component: BuyerRfqDetailComponent},
    {path: 'buyer-payment-detail', component: BuyerPaymentsComponent},
    {path: 'seller-dashboard/:memberId', component: SellerDashboardComponent},
