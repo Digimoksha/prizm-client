@@ -39,7 +39,7 @@ textarea {
   border-radius: 0.5rem;
   outline: none;
   border: 0.1rem solid #5555554D;
-background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center;
+/* background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center; */
 }
  #expected-delivery-date input {
     height: 2rem;
@@ -47,7 +47,7 @@ background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center
     border-radius: 0.5rem;
     outline: none;
     border: 0.1rem solid #5555554D;
-  background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center;
+  /* background: url('../../../assets/calendar-icon.svg') no-repeat right 10px center; */
 }
 .choose-file-container{
   display: flex;
