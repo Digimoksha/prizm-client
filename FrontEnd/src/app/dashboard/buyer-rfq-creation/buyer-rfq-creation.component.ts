@@ -87,7 +87,7 @@ this.rfqFormData.file = file
     //if(this.buyerId){
      // const requestedBy = this.buyerId.toString()
       const requestedBy = "8"
-console.log(this.rfqFormData)
+// console.log(this.rfqFormData)
         this.rfqFormData.name= rfqData.rfqName,
         this.rfqFormData.quote_date= rfqData.quoteDate,
         this.rfqFormData.expected_delivery_date= rfqData.expectedDeliveryDate,
