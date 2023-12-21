@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RfqService {
- baseUrl = `http://localhost:3001/api/v1`
+ baseUrl = `http://localhost:3001/api/v1/rfq`
   constructor(private http: HttpClient) { }
   generateRfq(name: string,quote_date: string,expected_delivery_date: string,status: string,request_by: string,payment_terms: string,description: string, file: File){
      const rfqData = new FormData()
@@ -17,6 +17,10 @@ export class RfqService {
      rfqData.append("payment_terms", payment_terms)
      rfqData.append("description", description)
      rfqData.append("recfile", file, file.name)
-     return this.http.post(`${this.baseUrl}/rfq/generate`,rfqData)
+     return this.http.post(`${this.baseUrl}/generate`,rfqData)
+  }
+
+  fetchRFQDetail(memberId: number){
+    return this.http.get(`${this.baseUrl}/fetch-rfq-detail/${memberId}`)
   }
 }

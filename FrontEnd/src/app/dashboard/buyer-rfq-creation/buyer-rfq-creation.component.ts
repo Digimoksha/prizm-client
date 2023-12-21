@@ -78,33 +78,30 @@ export class BuyerRfqCreationComponent {
   // }
 //buyerId = this.route.snapshot.paramMap.get('memberId')
   onFilePick(event: any){
-const file: File = event.target.files[0]
-this.rfqFormData.file = file
+    const file: File = event.target.files[0]
+    this.rfqFormData.file = file
   }
   onSaveRfqDetail(rfqDetail: NgForm){
     const rfqData = rfqDetail.value
-    const status = '0'
-    //if(this.buyerId){
-     // const requestedBy = this.buyerId.toString()
-      const requestedBy = "8"
-// console.log(this.rfqFormData)
-        this.rfqFormData.name= rfqData.rfqName,
-        this.rfqFormData.quote_date= rfqData.quoteDate,
-        this.rfqFormData.expected_delivery_date= rfqData.expectedDeliveryDate,
-        this.rfqFormData.status= status,
-        this.rfqFormData.request_by= requestedBy,
-        this.rfqFormData.payment_terms= rfqData.paymentTerms,
-        this.rfqFormData.description= rfqData.description
-
+    const status = 0;
+    const requestedBy = localStorage.getItem('memberId');
+      this.rfqFormData.name= rfqData.rfqName,
+      this.rfqFormData.quote_date= rfqData.quoteDate,
+      this.rfqFormData.expected_delivery_date= rfqData.expectedDeliveryDate,
+      this.rfqFormData.status= status,
+      this.rfqFormData.request_by= requestedBy,
+      this.rfqFormData.payment_terms= rfqData.paymentTerms,
+      this.rfqFormData.description= rfqData.description
+      console.log(this.rfqFormData);
      this.rfqService.generateRfq(this.rfqFormData.name, this.rfqFormData.quote_date, this.rfqFormData.expected_delivery_date, this.rfqFormData.status, this.rfqFormData.request_by, this.rfqFormData.description, this.rfqFormData.payment_terms, this.rfqFormData.file)
      .subscribe({
-       next: (responseData)=>{
+       next: ()=>{
          console.log('data saved')
        },
        error: err=>{
          console.log(err)
        }
-     })
+    })
   }
 
 }
