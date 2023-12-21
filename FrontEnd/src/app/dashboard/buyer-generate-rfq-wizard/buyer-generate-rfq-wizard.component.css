@@ -66,11 +66,15 @@ width: 15rem;
   gap: 1rem;
   margin-top: 1rem;
 }
-
+#add-btn, #delete-btn {
+  cursor: pointer;
+}
 #add-btn {
   height: 60%;
-  cursor: pointer;
   margin-left: 4rem;
   margin-top: 1rem;
 }
 
+.blue-btn {
+  margin-left: 4rem;
+}

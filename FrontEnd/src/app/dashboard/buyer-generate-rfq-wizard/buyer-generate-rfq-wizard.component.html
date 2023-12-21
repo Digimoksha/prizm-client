@@ -22,9 +22,10 @@
       <input id="qty" [(ngModel)]="rfqItemDeatil.qty">
       <input id="max-price" [(ngModel)]="rfqItemDeatil.maxPrice">
     </div>
-    <div class="delete-btn" (click)="onRemoveRow(i)"><span><i class="fa-solid fa-trash-can" style="color: #00ADEF; padding-left: 5px; padding-top: 4px;"></i></span></div>
+    <div id="delete-btn" (click)="onRemoveRow(i)"><span><i class="fa-solid fa-trash-can" style="color: #00ADEF; padding-left: 5px; padding-top: 4px;"></i></span></div>
 
    </div>
    <div><img id="add-btn" (click)="onAddRow()" src="../../../assets/add-user-icon.svg"></div>
+   <button class="blue-btn" type="submit">GENERATE RFQ</button>
   </mat-card>
 </div>
